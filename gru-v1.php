@@ -9,7 +9,7 @@ $R['time'] = time();
 $R['ip'] = $_SERVER['SERVER_ADDR'];
 
 $R['services'] = [
-  'mysql' => intval(fsockopen('localhost', 3306, $A, $B, 2)),
+  'mysql' => (bool) ( intval(fsockopen('localhost', 3306, $A, $B, 2)) ),
 ];
 
 header("Content-type: application/json");
