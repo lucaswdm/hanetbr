@@ -1,5 +1,7 @@
 <?php
 
+sleep(60);
+
 $R = [];
 
 $R['load'] = sys_getloadavg();
