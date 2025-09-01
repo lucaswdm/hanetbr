@@ -1,6 +1,6 @@
 <?php
 
-$R = $_REQUEST;
+$R = [];
 
 $R['load'] = sys_getloadavg();
 $R['os'] = php_uname();
