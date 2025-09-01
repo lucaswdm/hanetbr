@@ -5,7 +5,8 @@ $R = [];
 if(filter_var($_REQUEST['ip'], FILTER_VALIDATE_IP))
 {
       $RET = get_data('http://' . $_REQUEST['ip'] . '/gru-v1.php?' . http_build_query($_REQUEST));
-      $R['retorno'] = $RET;
+      $R['http'] = $RET[0];
+	  $R['data'] = $RET[1];
 }
 
 header("Content-type: application/json");
