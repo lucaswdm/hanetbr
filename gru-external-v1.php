@@ -2,7 +2,7 @@
 
 $R = [];
 
-if(filter_var($_REQUEST['ip', FILTER_VALIDATE_IP))
+if(filter_var($_REQUEST['ip'], FILTER_VALIDATE_IP))
 {
       $RET = get_data('http://' . $_REQUEST['ip'] . '/gru-v1.php?' . http_build_query($_REQUEST));
       $R['retorno'] = $RET;
